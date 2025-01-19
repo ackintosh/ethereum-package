@@ -124,7 +124,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "sum by(job) (increase(beacon_blobs_column_sidecar_processing_requests_total{job=~\"$job\"}[$__interval]))",
+          "expr": "sum by(job) (increase(beacon_data_column_sidecar_processing_requests_total{job=~\"$job\"}[$__interval]))",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -225,7 +225,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "sum by(job) (increase(beacon_blobs_column_sidecar_processing_successes_total{job=~\"$job\"}[$__interval]))",
+          "expr": "sum by(job) (increase(beacon_data_column_sidecar_processing_requests_total{job=~\"$job\"}[$__interval]))",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -326,7 +326,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "sum by(job) (increase(beacon_blobs_column_sidecar_processing_requests_total{job=~\"$job\"}[$__interval])) - sum by(job) (increase(beacon_blobs_column_sidecar_processing_successes_total{job=~\"$job\"}[$__interval]))",
+          "expr": "sum by(job) (increase(beacon_data_column_sidecar_processing_requests_total{job=~\"$job\"}[$__interval])) - sum by(job) (increase(beacon_blobs_column_sidecar_processing_successes_total{job=~\"$job\"}[$__interval]))",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -425,7 +425,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "histogram_quantile(0.99, rate(data_column_sidecar_computation_seconds_bucket{job=~\"$job\"}[$__rate_interval]))",
+          "expr": "histogram_quantile(0.99, rate(beacon_data_column_sidecar_computation_seconds_bucket{job=~\"$job\"}[$__rate_interval]))",
           "legendFormat": "{{job}}",
           "range": true,
           "refId": "A"
@@ -520,7 +520,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "histogram_quantile(0.99, rate(data_column_sidecar_inclusion_proof_verification_seconds_bucket{job=~\"$job\"}[$__rate_interval]))",
+          "expr": "histogram_quantile(0.99, rate(beacon_data_column_sidecar_inclusion_proof_verification_seconds_bucket{job=~\"$job\"}[$__rate_interval]))",
           "legendFormat": "{{job}}",
           "range": true,
           "refId": "A"
@@ -618,7 +618,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "sum by (job) (increase(data_availability_reconstructed_columns_total{job=~\"$job\"}[$__interval]))",
+          "expr": "sum by (job) (increase(beacon_data_availability_reconstructed_columns_total{job=~\"$job\"}[$__interval]))",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -716,7 +716,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "histogram_quantile(0.99, rate(data_availability_reconstruction_time_seconds_bucket{job=~\"$job\"}[$__rate_interval]))",
+          "expr": "histogram_quantile(0.99, rate(beacon_data_availability_reconstruction_time_seconds_bucket{job=~\"$job\"}[$__rate_interval]))",
           "legendFormat": "{{job}}",
           "range": true,
           "refId": "A"
@@ -811,7 +811,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "histogram_quantile(0.99, rate(kzg_verification_data_column_single_seconds_bucket{job=~\"$job\"}[$__rate_interval]))",
+          "expr": "histogram_quantile(0.99, rate(beacon_kzg_verification_data_column_single_seconds_bucket{job=~\"$job\"}[$__rate_interval]))",
           "hide": false,
           "legendFormat": "{{job}}",
           "range": true,
@@ -907,7 +907,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "histogram_quantile(0.99, rate(kzg_verification_data_column_batch_seconds_bucket{job=~\"$job\"}[$__rate_interval]))",
+          "expr": "histogram_quantile(0.99, rate(beacon_kzg_verification_data_column_batch_seconds_bucket{job=~\"$job\"}[$__rate_interval]))",
           "legendFormat": "{{job}}",
           "range": true,
           "refId": "A"
@@ -1002,7 +1002,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "histogram_quantile(0.99, rate(beacon_blobs_column_sidecar_gossip_verification_seconds_bucket{job=~\"$job\"}[$__rate_interval]))",
+          "expr": "histogram_quantile(0.99, rate(beacon_data_column_sidecar_gossip_verification_seconds_bucket{job=~\"$job\"}[$__rate_interval]))",
           "instant": false,
           "legendFormat": "{{job}}",
           "range": true,
